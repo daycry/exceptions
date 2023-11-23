@@ -1,0 +1,51 @@
+{
+    "name": "daycry/exceptions",
+    "description": "Exceptions for Codeigniter 4",
+    "homepage": "https://github.com/daycry/exceptions",
+    "authors":
+    [
+        {
+            "name": "daycry",
+            "homepage": "https://github.com/daycry",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "require": {
+      "php": ">=7.4 || ^8.0"
+    },
+    "require-dev":
+    {
+        "codeigniter4/framework": "^4"
+    },
+    "autoload":
+    {
+        "psr-4": {
+            "Daycry\\Exceptions\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "scripts": {
+        "ci": [
+            "Composer\\Config::disableProcessTimeout",
+            "@cs"
+        ],
+        "cs": [
+            "php-cs-fixer fix src --ansi --verbose --dry-run --diff",
+            "php-cs-fixer fix tests --ansi --verbose --dry-run --diff"
+        ],
+        "cs-fix": [
+            "php-cs-fixer fix src --ansi --verbose --diff",
+            "php-cs-fixer fix tests --ansi --verbose --diff"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
