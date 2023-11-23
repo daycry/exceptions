@@ -9,6 +9,6 @@ use Throwable;
 /**
  * Base Exception Interface for RestFul
  */
-interface BaseException extends Throwable
+interface BaseExceptionInterface extends Throwable
 {
 }
